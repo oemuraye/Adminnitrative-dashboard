@@ -5,6 +5,7 @@
     --dark-color: #f4f5f7;
     --white-color: #fff;
     --bg-color: linear-gradient(60deg, var(--primary-color), var(--secondary-color));
+    --bg-gray: #8390A2;
     --dark: #000000;
 }
 body {
@@ -13,12 +14,18 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 20% auto;
+    background-color: var(--bg-gray) !important;
 }
 .active {
-        grid-template-columns: 50px auto;
+    grid-template-columns: 50px auto;
+    
 }
 .btn {
     background: var(--bg-color) !important;
+}
+.btn:hover {
+    transform: translateX(1px);
+    transition: ease-in;
 }
 
 /* sidebar */
@@ -55,16 +62,66 @@ table .fas {
     margin: 0 auto;
 }
 .inventory .active {
-    background-color: var(--secondary-color);
-    color: var(--white-color);
+    background-color: var(--secondary-color) !important;
+    color: var(--white-color) !important;
 }
 .inventory .active span {
-    color: var(--white-color);
+    color: var(--white-color) !important;
+}
+.data1 {
+    animation: rotateIn 1s ease-in;
+}
+.data2,
+.data3, 
+.data4 {
+    animation: slideInFromRight 1s ease-in;
 }
 
 
-
-
+/*Animations*/
+@keyframes rotateIn {
+    0% {
+        transform: rotateY(-100deg);
+    }
+    50% {
+        transform: rotateY(180);
+    }
+    100% {
+        transform: rotateY(0);
+    }
+}
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideInFromTop {
+    0% {
+        transform: translatey(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
 
 /* Tablets and Under */
 
@@ -96,5 +153,8 @@ table .fas {
     }
     .search input {
         border-bottom-right-radius: 0 !important;
+    }
+    .data {
+        animation: rotateIn 1s ease-in;
     }
 }
