@@ -1,0 +1,100 @@
+/* Utilities/Default */
+:root {
+    --primary-color: #10b981c4;
+    --secondary-color: #dd2f6fdc;
+    --dark-color: #f4f5f7;
+    --white-color: #fff;
+    --bg-color: linear-gradient(60deg, var(--primary-color), var(--secondary-color));
+    --dark: #000000;
+}
+body {
+    font-family: sans-serif, 'lato';
+    line-height: 1.6;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 20% auto;
+}
+.active {
+        grid-template-columns: 50px auto;
+}
+.btn {
+    background: var(--bg-color) !important;
+}
+
+/* sidebar */
+aside {
+    height: auto;
+    background: var(--bg-color);
+}
+
+/* header */
+nav {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   justify-content: center;
+   align-items: center; 
+}
+header .fas,
+.inventory span,
+.customer-details ,
+table .fas {
+    color: var(--secondary-color);
+}
+.search {
+    border: 1px solid var(--secondary-color);
+    padding: 5px;
+    border-radius: 50px;
+    border-top-left-radius: 0;
+}
+.search input {
+    border: 1px solid var(--primary-color);
+    border-top-left-radius: 0 !important;
+}
+
+.inventory {
+    margin: 0 auto;
+}
+.inventory .active {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+.inventory .active span {
+    color: var(--white-color);
+}
+
+
+
+
+
+/* Tablets and Under */
+
+@media (max-width: 850px) {
+    body{
+        grid-template-columns: 30px auto;
+    }
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .title {
+        order: 1;
+    }
+    .profile {
+        order: 2;
+        line-height: .5;
+    }
+    .profile img {
+        width: 50px;
+        height: 50px;
+    }
+    .search {
+        order: 3;
+        grid-column: 1/2;
+        width: 100%;
+        margin: 10px 0;
+        border-bottom-right-radius: 0;
+    }
+    .search input {
+        border-bottom-right-radius: 0 !important;
+    }
+}
