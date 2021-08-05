@@ -8,17 +8,19 @@
     --bg-gray: #8390A2;
     --dark: #000000;
 }
+ul {
+    list-style: none !important;
+}
+a {
+    text-decoration: none !important;
+}
 body {
     font-family: sans-serif, 'lato';
     line-height: 1.6;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 20% auto;
+    /* display: grid;
+    grid-template-columns: 20% auto; */
     background-color: var(--bg-gray) !important;
-}
-.active {
-    grid-template-columns: 50px auto;
-    
 }
 .btn {
     background: var(--bg-color) !important;
@@ -27,11 +29,60 @@ body {
     transform: translateX(1px);
     transition: ease-in;
 }
+.fa-bars:hover {
+    color: var(--primary-color);
+}
+
+
+
+.activeNav aside {
+    width: 4.4%;  
+}
+.activeNav main {
+    width: 95.6%;
+}
+.activeNav .sidetext {
+    display: none;
+}
+.activeNav aside .fas {
+    display: grid;
+    justify-content: center;
+}
+
+
 
 /* sidebar */
 aside {
-    height: auto;
-    background: var(--bg-color);
+    height: 100vh;
+    background: var(--secondary-color);
+    width: 24%;
+    position: fixed;
+}
+.list-group-item {
+    background-color: var(--secondary-color) !important;  
+}
+.list-group-item h4 {
+    color: var(--white-color);
+}
+.list-group-item:hover:not(:first-child) {
+    background-color: var(--white-color) !important; 
+    border-radius: 500px 0 0 500px;
+    margin-left: 10px;
+    transition-timing-function: ease-in-out 2s;
+}
+.list-group-item:hover:not(:first-child) h4 {
+    color: var(--secondary-color) !important;
+}
+.list-group-item.active {
+    border: 2px dotted var(--primary-color) !important;
+    border-radius: 500px 0 0 500px;
+}
+
+
+/* Main */
+main {
+    width: 76%;
+    float: right;
 }
 
 /* header */
@@ -133,6 +184,36 @@ table .fas {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+    
+    aside {
+        width: 4.4%;  
+    }
+    main {
+        width: 95.6%;
+    }
+    .sidetext {
+        display: none;
+    }
+    aside .fas, aside .fa {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .activeNav aside {
+        width: 4.4%;  
+    }
+    .activeNav main {
+        width: 95.6%;
+    }
+    .activeNav .sidetext {
+        display: none;
+    }
+    .activeNav aside .fa {
+        display: grid;
+        justify-content: center;
+    }
+
     .title {
         order: 1;
     }

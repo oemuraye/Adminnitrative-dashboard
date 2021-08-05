@@ -12,12 +12,92 @@
 <body class="body">
     <!-- Sidebar -->
     <aside>
-        
+        <div class="sidebar-menu">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item py-5">
+                    <a href="#">
+                        <h4>
+                            <span class="me-3 fas fa-chess-king"></span> 
+                            <span class="sidetext show ms-2">Pius King</span>
+                        </h4>
+                     </a>
+                </li>
+                <li class="list-group-item active">
+                    <a href="#">
+                        <h4>
+                            <span class="me-3 fas fa-database"></span> 
+                            <span class="sidetext ms-2">Dashboard</span>
+                        </h4>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#">
+                        <h4>
+                            <span class="me-2 fas fa-users"></span> 
+                            <span class="sidetext ms-2">Customers</span>
+                        </h4>
+                    </a>
+                </li>
+                <li class="list-group-item accordion-button collapsed">
+                    <a href="#" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h4>
+                            <span class="me-2 fas fa-project-diagram"></span> 
+                            <span class="sidetext ms-2">Projects</span>
+                            <i class="sidetext fa fa-caret-down" aria-hidden="true"></i>
+                        </h4>
+                    </a>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><a href="http://">First Project</a></li>
+                                <li><a href="http://">First Project</a></li>
+                                <li><a href="http://">First Project</a></li>
+                                <li><a href="http://">First Project</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <a href="#">
+                        <h4>
+                            <span class="me-2 fas fa-cart-plus"></span> 
+                            <span class="sidetext ms-2">Orders</span>
+                        </h4>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#">
+                        <h4>
+                            <span class="me-2 fas fa-cash-register"></span>
+                            <span class="sidetext ms-2">Inventory</span>
+                        </h4>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#">
+                        <h4>
+                            <span class="me-2 fas fa-user-ninja"></span> 
+                            <span class="sidetext ms-2">Account</span>
+                        </h4>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#">
+                        <h4>
+                            <span class="me-2 fas fa-tasks"></span> 
+                            <span class="sidetext ms-2">Tasks</span>
+                        </h4>
+                    </a>
+                </li>
+                <li class="list-group-item disabled"></li>
+            </ul>
+        </div>
+
     </aside>
     <main class="">
         <!--Heading/Nav-->
         <header class="align-items-center sticky-top bg-white px-2 ">
-            <nav class="navbar justify-content-around">
+            <nav class="navbar justify-content-between">
                 <div class="title my-sm-2">
                     <h3><a href="#" class="fas fa-bars me-5" id="hamburger"></a>Dashboard</h3>
                 </div>
