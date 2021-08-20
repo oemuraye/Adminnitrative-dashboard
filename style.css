@@ -27,14 +27,15 @@ body {
     transform: translateX(1px);
     transition: ease-in;
 }
-.fa-bars:hover {
+.navigation-bar:hover {
     color: var(--primary-color);
 }
 
 
 
 .activeNav aside {
-    width: 4.4%;  
+    width: 4.4%; 
+     
 }
 .activeNav main {
     width: 95.6%;
@@ -55,11 +56,13 @@ aside {
     background: var(--secondary-color);
     width: 19%;
     position: fixed;
+    transition: 1s ease-in-out;
 }
 .list-group-item {
     background-color: inherit !important;
     border: none !important;  
     display: inline-block;
+    
 }
 .list-group-item h4 {
     color: var(--white-color);
@@ -83,6 +86,7 @@ aside {
 main {
     width: 81%;
     float: right;
+    transition: 1s ease-in-out;
 }
 
 /* header */
@@ -186,19 +190,19 @@ table .fas {
 /* Tablets and Under */
 
 @media (max-width: 850px) {
-    body{
+    /* body{
         grid-template-columns: 30px auto;
-    }
-    nav {
+    } */
+    /* nav {
         display: grid;
         grid-template-columns: 1fr 1fr;
-    }
+    } */
     
     aside {
-        width: 4.4%;  
+        width: 6%;  
     }
     main {
-        width: 95.6%;
+        width: 94%;
     }
     .sidetext {
         display: none;
@@ -210,17 +214,38 @@ table .fas {
     }
 
     .activeNav aside {
-        width: 4.4%;  
+        position: fixed;
+        top: 0;
+        width: 250px;
+        z-index: 15;  
+        display: block;
+        transition: 2s ease-in-out;
+
     }
     .activeNav main {
-        width: 95.6%;
+        width: 100%;
+        opacity: 0.5;
+        transition: 1s ease-in-out;
+    }
+    .activeNav header {
+        z-index: 2;
+    }
+    .activeNav aside .fas,
+    .activeNav aside .fa {
+        display: inline-block;
+        transition: 2s ease-in-out;
     }
     .activeNav .sidetext {
-        display: none;
+        display: inline-block;
+        transition: 2s ease-in-out;
     }
-    .activeNav aside .fa {
-        display: grid;
-        justify-content: center;
+    .activeNav .navigation-bar {
+        z-index: 100 ;
+        color: #dd2f6f;
+        position: absolute;
+        right: 0;
+        display: block;
+        opacity: 1 !important;
     }
 
     .title {
@@ -246,5 +271,15 @@ table .fas {
     }
     .data {
         animation: rotateIn 1s ease-in;
+    }
+}
+
+@media (max-width: 575px) {
+    aside {
+        display: none;  
+        width: 75%;
+    }
+    main {
+        width: 100%;
     }
 }
